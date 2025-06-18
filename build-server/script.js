@@ -44,7 +44,7 @@ async function init(){
 
             const command = new PutObjectCommand({
                 Bucket:'vercelcloneoutputs',
-                Key:`__outputs/${PROJECT_ID}/${filePath}`,
+                Key:`__outputs/${PROJECT_ID}/${file}`,
                 Body: fs.createReadStream(filePath),
                 ContentType: mime.lookup(filePath)
             })
