@@ -13,7 +13,6 @@ app.use((req,res)=>{
     const subdomain = hostname.split('.')[0];
 
     const resolveTo = `${BASE_PATH}/${subdomain}`
-
     proxy.web(req,res,{target:resolveTo, changeOrigin:true })
 })
 
